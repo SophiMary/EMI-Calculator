@@ -43,6 +43,12 @@ const useStyles = makeStyles((theme) =>
         carsTextField: {
             width: "100%",
             padding: "10px",
+            '& .MuiFormLabel-colorSecondary.Mui-focused': {
+                color: "#F75D33",
+            },
+            '& .MuiInput-colorSecondary.MuiInput-underline:after': {
+                borderBottomColor: "#F75D33",
+            },
         },
         amountSection: {
             marginBottom: "40px",
@@ -266,7 +272,7 @@ export default function emiCalculator() {
                             <form>
                                 <div className={classes.amountSection}>
                                     <div className={classes.amountLabel}>
-                                        <label htmlFor="amount">Car Price</label>
+                                        <label htmlFor="amount">Amount</label>
                                     </div>
                                     <div className={classes.amountInput}>
                                         <span>₹</span>
