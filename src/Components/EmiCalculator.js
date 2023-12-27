@@ -207,7 +207,7 @@ export default function emiCalculator() {
         : 0) : amountToBePaid / tenure;
     let loanAmount = emi * tenure + downPaymentPaid;
     let intAmount = tenure && interest ? loanAmount - amount : 0;
-    let totalPayableAmount = amountToBePaid + intAmount;
+    let totalPayableAmount = int(amountToBePaid) + int(intAmount);
 
     // Graph Data
     const data = {
